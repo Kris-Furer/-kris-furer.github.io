@@ -168,6 +168,10 @@ nav a, nav span {
   background: url('../img/surf-bg-1.png');
 }
 
+.block5 {
+  background-color:rgb(223, 217, 212);
+}
+
 .block4::before {
   content: "";
   position: absolute;
@@ -177,6 +181,16 @@ nav a, nav span {
   background-size: 100%;
   filter: blur(15px);
 }
+.block5::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/mb-background.png');
+  background-size: 100%;
+  filter: blur(15px);
+}
+
 
 .screenshot-scroll, .screenshot-container, .screenshot-mobile {
   position: absolute;
@@ -674,6 +688,14 @@ nav a, nav span {
   opacity: 1;
 }
 
+.oops-container {
+  display: none;
+  width:100vw;
+  height:100vh;
+  background: rgb(74, 74, 74);
+}
+
+
 .oops {
   display: none;
   transition: 1s all ease;
@@ -813,9 +835,10 @@ nav a, nav span {
 
   .screenshot-scroll, .screenshot-container, .screenshot-mobile {
     position: static;
-    width: 80vw;
+    width: 90vw;
     margin: auto;
     transform: none;
+    margin:auto!important;
   }
 
   /* prevent default behaviour from fullage js */
@@ -909,12 +932,18 @@ nav a, nav span {
     display: none;
   }
 
+.customLeft, .customRight {
+  font-size: 50px;
+  top:70%;
+}
+
+
   .customLeft {
-    left: 2%;
+    left: 20%;
   }
 
   .customRight {
-    right: 2%;
+    right: 20%;
   }
 }
 /* 768px and down) */
@@ -970,6 +999,11 @@ nav a, nav span {
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 750px) {
+.oops-container {
+  display:block;
+}
+
+
   .oops {
     display: flex;
     text-align: left;
@@ -981,9 +1015,8 @@ nav a, nav span {
     background-position: center;
   }
 
-  .oops-container {
-    display: block;
-  }
+
+
 }
 
 /* Extra large devices (phones, 600px and up?) */
